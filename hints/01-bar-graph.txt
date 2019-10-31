@@ -1,0 +1,186 @@
+I already built (most of) your scales for you, you just need to use them.
+
+
+
+
+
+
+
+
+
+
+Be careful about your yPositionScale. Does it seem right?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+How are you going to use d3 to find those buttons?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+They need an id!
+
+
+
+
+
+
+
+
+
+
+
+For selecing elements INSIDE OF THE GRAPHIC, you use svg.select/svg.selectAll. That's because it means "select stuff INSIDE the svg"
+
+For selecting elements OUTSIDE OF THE GRAPHIC, you use d3.select/d3.selectAll. That's because it means "select anything that d3 can see on the whole page"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You can use classes or if statements to highlight/color, up to you!
+
+
+
+
+
+
+
+
+
+
+
+
+If you're using classes, remember to reset EVERY bar before you update the highlighted bar
+
+
+
+
+
+
+
+
+
+
+
+
+If you, for some reason, wanted to remove not-lowercase-letters from something, you could use
+
+    whatever.replace(/[^a-z]*/g, '')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Are you SURE you did the height and y position correctly???
+
+
+
+
+
+
+
+
+
+Except "low GDP countries", which will definitely be an if statement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+If statements are pretty boring, but they can be useful inside of a function(d). This one below changes the font size of a label based on whether the city is tiny or not.
+
+    .attr('text-size', function(d) {
+        if(d.city_size == 'tiny') {
+            return 10
+        } else {
+            return 20
+        }
+    })
+
+
+
+
+
+
+
+
+
+
+
+Try changing the padding on your scaleBand to make things look nicer!
+
+
